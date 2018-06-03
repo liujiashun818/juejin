@@ -18,7 +18,7 @@ app.get('/detail/:id', async function (req, res) {
     let tags = await query(`SELECT tags.* FROM article_tag INNER JOIN tags on article_tag.tag_id = tags.id WHERE article_tag.article_id=?`, [id]);
     res.render('detail', { article, tags });
 });
-app.listen(8080);
+app.listen(8899);
 
 const CronJob = require('cron').CronJob;
 const { spawn } = require('child_process');
